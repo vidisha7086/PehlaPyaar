@@ -92,7 +92,8 @@ Email: krishnaik06@gmail.com
 
 	
 ## 3. Create ECR repo to store/save docker image
-    - Save the URI: 566373416292.dkr.ecr.us-east-1.amazonaws.com/text-s
+    # - Save the URI: 566373416292.dkr.ecr.us-east-1.amazonaws.com/text-s
+    - Save the URI: 646201277986.dkr.ecr.us-east-1.amazonaws.com/textsummarizer_bappy_krish
 
 	
 ## 4. Create EC2 machine (Ubuntu) 
