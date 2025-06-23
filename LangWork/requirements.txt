@@ -1,0 +1,8 @@
+sympy
+numpy 
+pandas
+langchain
+openai
+langchain_community
+langchain_groq
+matplotlib
