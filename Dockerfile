@@ -1,13 +1,23 @@
 FROM python:3.10-slim-buster
 
-RUN apt update -y && apt install awscli -y
+# Set up environment
 WORKDIR /app
 
-COPY . /app
+# Install system dependencies
+RUN apt-get update -y && \
+    apt-get install -y awscli && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
 
-RUN pip install -r requirements.txt
-RUN pip install --upgrade accelerate
-RUN pip uninstall -y transformers accelerate
-RUN pip install transformers accelerate
+# Copy requirements first for better caching
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
 
+# Copy remaining files
+COPY . .
+
+# Expose port (assuming your app uses 8080 based on your run command)
+EXPOSE 8080
+
+# Run the application
 CMD ["python3", "app.py"]
