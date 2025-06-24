@@ -6,3 +6,7 @@ openai
 langchain_community
 langchain_groq
 matplotlib
+
+
+pulp
+docplex

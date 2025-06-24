@@ -1,12 +1,7 @@
 
 
 # Environments
-.env
-.venv
-env/
-venv/
-ENV/
-env.bak/
-venv.bak/
-.MAYANKenv
+
 MAYANKenv/
+DL_bappy_env/
+DL_bappy_venv/
